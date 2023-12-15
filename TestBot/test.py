@@ -1,13 +1,17 @@
-import alpaca_trade_api as tradeapi
+import requests
 
-# authentication and connection details
-api_key = 'CKORSRQHYMMEHPEODEHU'
-api_secret = 'XJgVmGGiaMNb8PlBfMgCHfbiADOtXEHujLl9jYZL'
-APCA_API_BASE_URL = 'https://broker-api.sandbox.alpaca.markets'
+url = "https://broker-api.sandbox.alpaca.markets/v2/account"
 
-# instantiate REST API
-api = tradeapi.REST(api_key, api_secret, APCA_API_BASE_URL)
 
-# obtain account information
-account = api.get_account()
-print(account)
+#    KEY: "CKORSRQHYMMEHPEODEHU"
+#    SECRET_KEY: "XJgVmGGiaMNb8PlBfMgCHfbiADOtXEHujLl9jYZL"
+
+headers = {
+    "accept": "application/json",
+    "APCA-API-KEY-ID": "CKORSRQHYMMEHPEODEHU",
+    "APCA-API-SECRET-KEY": "XJgVmGGiaMNb8PlBfMgCHfbiADOtXEHujLl9jYZL"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)

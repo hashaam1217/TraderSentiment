@@ -1,3 +1,4 @@
+# Create a small bot that buys or sells based on info
 import requests
 
 url = "https://paper-api.alpaca.markets/v2/account"

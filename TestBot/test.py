@@ -1,15 +1,11 @@
 import requests
 
-url = "https://broker-api.sandbox.alpaca.markets/v2/orders"
-
-api_key = "CKCE9FV33AXIH7SZ1CBE"
-api_secret = "b2vQmHOQOaXWPsNSkW771y84q9N8EqMY8OHPyasa"
-
+url = "https://paper-api.alpaca.markets/v2/account"
 
 headers = {
     "accept": "application/json",
-    "APCA-API-KEY-ID": api_key,
-    "APCA-API-SECRET-KEY": api_secret
+    "APCA-API-KEY-ID": "PKG18B6O6AJJ3T3Z4GPJ",
+    "APCA-API-SECRET-KEY": "bvQw5otydDb7ax9cdSJHYDpME4nr1MS7s6uOImzJ"
 }
 
 response = requests.get(url, headers=headers)
